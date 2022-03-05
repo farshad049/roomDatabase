@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/liName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:padding="6dp"
+            />
+        <EditText
+            android:id="@+id/edName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_margin="10dp"
+            android:hint="Enter Name"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/liEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/liName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Email"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:padding="6dp"
+            />
+        <EditText
+            android:id="@+id/edEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_margin="10dp"
+            android:hint="Enter Email"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Record"
+        app:layout_constraintTop_toBottomOf="@+id/liEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/allRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="all the inserted records"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+
+        />
+
+
+    <TextView
+        android:id="@+id/noRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No record found"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/allRecord"
+        android:visibility="visible"
+        tools:visibility="visible"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noRecord"
+        tools:listitem="@layout/item_table"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

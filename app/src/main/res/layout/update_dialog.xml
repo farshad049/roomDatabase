@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/updateRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update record"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="left"
+        />
+    <LinearLayout
+        android:id="@+id/liName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/updateRecord"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:padding="6dp"
+            />
+        <EditText
+            android:id="@+id/edName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_margin="10dp"
+            android:hint="Enter Name"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/liEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/liName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Email"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:padding="6dp"
+            />
+        <EditText
+            android:id="@+id/edEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_margin="10dp"
+            android:hint="Enter Email"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/buttuns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        app:layout_constraintTop_toBottomOf="@+id/liEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="update"
+            android:textColor="@color/teal_200"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            />
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
